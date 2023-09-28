@@ -3,7 +3,7 @@ name: Auto generate exe
 on:
   push:
     tags:
-      - Desktop-v*
+      - v*
 
 jobs:
   create_release:
