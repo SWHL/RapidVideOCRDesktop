@@ -1,0 +1,4 @@
+rapidvideocr
+pyqt5
+pyinstaller
+get_pypi_latest_version
