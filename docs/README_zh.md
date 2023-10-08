@@ -3,7 +3,7 @@
 
 <div>&nbsp;</div>
 <div align="center">
-    <b><font size="4"><i>Desktop version based on PyQt</i></font></b>
+    <b><font size="4"><i>基于PyQT的桌面版RaidVideOCR</i></font></b>
 </div>
 <div>&nbsp;</div>
 
@@ -17,11 +17,13 @@
 <a href="https://semver.org/"><img alt="SemVer2.0" src="https://img.shields.io/badge/SemVer-2.0-brightgreen"></a>
 <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
-[简体中文](https://github.com/SWHL/RapidVideOCRDesktop/blob/main/docs/README_zh.md) | English
+简体中文 | [English](https://github.com/SWHL/RapidVideOCRDesktop)
 </div>
 
-
-### Introduction
+### 简介
+- 视频硬字幕提取工具RapidVideOCR的桌面版，可直接下载对应操作系统下的压缩包，解压即可使用。
+- 仅支持中英文
+- 如果有帮助到您的话，请给个小星星⭐。
 
 ### Demo
 <div align="center">
@@ -29,28 +31,35 @@
     <img src="https://camo.githubusercontent.com/7d954a3498edb68f4491af260e428c94126c81698f564b37691ef95dda677ddd/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f64343763353564626464643334373131393238386466643464353262366165372e706e67" width=50%>
 </div>
 
-### Documentation
-Full documentation can be found on [docs](https://swhl.github.io/RapidVideOCR/docs/tutorial/beginner/), in Chinese.
+### 文档
+完整文档请移步：[docs](https://swhl.github.io/RapidVideOCR/docs/tutorial/beginner/)
 
-### Code Contributors
+### 贡献者
 <p align="left">
   <a href="https://github.com/SWHL/RapidVideOCR/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=SWHL/RapidVideOCRDesktop" width="10%"/>
   </a>
 </p>
 
-### Contributing
-- Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-- Please make sure to update tests as appropriate.
+### 贡献指南
+我们感谢所有的贡献者为改进和提升 RapidVideOCR 所作出的努力。
+- 欢迎提交请求。对于重大更改，请先打开issue讨论您想要改变的内容。
+- 请确保适当更新测试。
 
-### [Sponsor](https://swhl.github.io/RapidVideOCR/docs/sponsor/)
+### 加入我们
+- 微信扫描以下二维码，关注**RapidAI公众号**，回复video即可加入RapidVideOCR微信交流群：
+    <div align="center">
+        <img src="https://raw.githubusercontent.com/RapidAI/.github/main/assets/RapidAI_WeChatAccount_round_corner.png" width="25%" height="25%" align="center">
+    </div>
 
-If you want to sponsor the project, you can directly click the **Buy me a coffee** image, please write a note (e.g. your github account name) to facilitate adding to the sponsorship list below.
+- 扫码加入QQ群（706807542）：
+    <div align="center">
+        <img src="https://github.com/SWHL/RapidVideOCR/releases/download/v2.0.1/QQGroup.png" width="25%" height="25%" align="center">
+    </div>
 
-<div align="left">
-  <a href="https://www.buymeacoffee.com/SWHL"><img src="https://raw.githubusercontent.com/RapidAI/.github/main/assets/buymeacoffe.png" width="30%" height="30%"></a>
-</div>
+### [赞助](https://swhl.github.io/RapidVideOCR/docs/sponsor/)
 
-### License
-This project is released under the [Apache 2.0 license](./LICENSE).
+如果您想要赞助该项目，可直接点击当前页最上面的Sponsor按钮，请写好备注(**您的Github账号名称**)，方便添加到赞助列表中。
+
+### 开源许可证
+该项目采用 [Apache 2.0 license](../LICENSE) 开源许可证。

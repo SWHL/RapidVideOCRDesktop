@@ -7,5 +7,5 @@ contact_links:
     url: https://github.com/SWHL/RapidVideOCRDesktop/discussions/categories/ideas
     about: Please vote for and post new feature ideas in the community forum.
   - name: 📖 Documentation
-    url: https://github.com/SWHL/RapidVideOCRDesktop/wiki
+    url: https://swhl.github.io/RapidVideOCR/docs/tutorial/beginner/
     about: A great place to find instructions and answers about RapidOCR.
