@@ -25,8 +25,7 @@
 
 ### Demo
 <div align="center">
-    <img src="https://camo.githubusercontent.com/5763bb69dccad729feeb5abdd5c57573e5e4d54c0edd3d3b90ccaa9e2f80b3dd/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f36643634303862653362643734646361393465376264353138363931356634622e706e67" width=50% style="float:left">
-    <img src="https://camo.githubusercontent.com/7d954a3498edb68f4491af260e428c94126c81698f564b37691ef95dda677ddd/68747470733a2f2f696d672d626c6f672e6373646e696d672e636e2f64343763353564626464643334373131393238386466643464353262366165372e706e67" width=50%>
+    <img src="https://github.com/SWHL/RapidVideOCRDesktop/releases/download/v0.0.0/demo.png" width=80%>
 </div>
 
 ### Documentation
