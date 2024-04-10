@@ -22,6 +22,10 @@
 
 
 ### Introduction
+- The desktop version of the video hard subtitle extraction tool RapidVideOCR can directly download the compressed package under the corresponding operating system, decompress it and use it.
+- Only supports Chinese and English
+- If it helps you, please give a small star ⭐.
+
 
 ### Demo
 <div align="center">
