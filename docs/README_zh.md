@@ -24,6 +24,7 @@
 - 视频硬字幕提取工具RapidVideOCR的桌面版，可直接下载对应操作系统下的压缩包，解压即可使用。
 - 仅支持中英文
 - 如果有帮助到您的话，请给个小星星⭐。
+- 原始的仓库：[RapidVideOCR](https://github.com/SWHL/RapidVideOCR)
 
 ### Demo
 <div align="center">

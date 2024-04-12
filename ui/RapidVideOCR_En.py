@@ -61,11 +61,11 @@ class RapidVideOCRUI(QWidget):
         # ---------------调节参数 group box--------------
         self.ocr_gb_params = QGroupBox(self)
         self.ocr_gb_params.setGeometry(QRect(30, 210, 651, 81))
-        self.ocr_gb_params.setTitle("调节参数")
+        self.ocr_gb_params.setTitle("Parameters")
         self.ocr_gb_params.setFont(gb_font)
         self.ocr_gb_params.setObjectName("ocr_gb_params")
 
-        # 单选框：是否叠图识别
+        # 单选框:是否叠图识别
         self.widget_batch = QWidget(self.ocr_gb_params)
         self.widget_batch.setGeometry(QRect(31, 31, 207, 27))
         font.setBold(False)
@@ -77,12 +77,12 @@ class RapidVideOCRUI(QWidget):
 
         self.label_mode = QLabel(self.widget_batch)
         self.label_mode.setObjectName("label_mode")
-        self.label_mode.setText("是否叠图识别：")
+        self.label_mode.setText("Whether rec overlapping:")
         self.hl_batch.addWidget(self.label_mode)
 
         self.rb_rec_mode = QRadioButton(self.widget_batch)
         self.rb_rec_mode.setObjectName("rb_rec_mode")
-        self.rb_rec_mode.setText("叠图识别")
+        self.rb_rec_mode.setText("rec overlapping")
         self.hl_batch.addWidget(self.rb_rec_mode)
 
         # 叠图识别下，batch个数
@@ -98,7 +98,7 @@ class RapidVideOCRUI(QWidget):
         self.label_batch = QLabel(self.ocr_gb_params)
         self.label_batch.setFont(font)
         self.label_batch.setObjectName("label_batch")
-        self.label_batch.setText("叠图个数：")
+        self.label_batch.setText("overlapp nums:")
         self.hl_batch_num.addWidget(self.label_batch)
 
         self.le_batch = QLineEdit(self.ocr_gb_params)
@@ -123,7 +123,7 @@ class RapidVideOCRUI(QWidget):
         self.tab_only_ocr = QWidget()
         self.tab_only_ocr.setObjectName("tab_only_ocr")
 
-        # 图像目录 [] 点击选择
+        # 图像目录 [] Select
         self.img_dir_widget = QWidget(self.tab_only_ocr)
         self.img_dir_widget.setGeometry(QRect(30, 40, 641, 31))
         self.img_dir_widget.setObjectName("widget_img_dir")
@@ -138,8 +138,8 @@ class RapidVideOCRUI(QWidget):
         self.label_img_dir.setGeometry(QRect(30, 40, 581, 31))
         self.label_img_dir.setFont(font)
         self.label_img_dir.setObjectName("label_img_dir")
-        self.label_img_dir.setText("图像目录：")
-        self.label_img_dir.setToolTip("输入为RGBImages目录，输出为字幕结果")
+        self.label_img_dir.setText("Image Directory:")
+        self.label_img_dir.setToolTip("Input: RGBImages Dir. Output: subtitle result.")
         self.hl_img_dir.addWidget(self.label_img_dir)
 
         self.le_display_img_dir = QLineEdit(self.img_dir_widget)
@@ -152,11 +152,11 @@ class RapidVideOCRUI(QWidget):
         self.btn_select_img_dir = QPushButton(self.img_dir_widget)
         self.btn_select_img_dir.setGeometry(QRect(540, 20, 81, 31))
         self.btn_select_img_dir.setObjectName("btn_select_img_dir")
-        self.btn_select_img_dir.setText("点击选择")
+        self.btn_select_img_dir.setText("Select")
         self.btn_select_img_dir.clicked.connect(self.select_img_dir)
         self.hl_img_dir.addWidget(self.btn_select_img_dir)
 
-        # 保存路径 [] 点击选择
+        # 保存路径 [] Select
         self.srt_widget = QWidget(self.tab_only_ocr)
         self.srt_widget.setGeometry(QRect(30, 90, 641, 31))
         font.setBold(False)
@@ -170,7 +170,7 @@ class RapidVideOCRUI(QWidget):
         self.lable_save_name = QLabel(self.srt_widget)
         self.lable_save_name.setFont(font)
         self.lable_save_name.setObjectName("lable_save_name")
-        self.lable_save_name.setText("保存路径：")
+        self.lable_save_name.setText("Save Path:")
         self.hl_srt_path.addWidget(self.lable_save_name)
 
         self.le_save_path = QLineEdit(self.srt_widget)
@@ -180,7 +180,7 @@ class RapidVideOCRUI(QWidget):
 
         self.btn_save_result = QPushButton(self.srt_widget)
         self.btn_save_result.setObjectName("btn_save_result")
-        self.btn_save_result.setText("点击选择")
+        self.btn_save_result.setText("Select")
         self.btn_save_result.clicked.connect(self.select_save_srt_dir)
         self.hl_srt_path.addWidget(self.btn_save_result)
 
@@ -191,7 +191,7 @@ class RapidVideOCRUI(QWidget):
         self.tab_vsf_ocr = QWidget()
         self.tab_vsf_ocr.setObjectName("tab_vsf_ocr")
 
-        # VSF exe [] 点击选择
+        # VSF exe [] Select
         self.vsf_path_widget = QWidget(self.tab_vsf_ocr)
         self.vsf_path_widget.setGeometry(QRect(30, 20, 641, 31))
         self.vsf_path_widget.setObjectName("widget_img_dir")
@@ -205,8 +205,8 @@ class RapidVideOCRUI(QWidget):
         self.label_vsf_path = QLabel(self.vsf_path_widget)
         self.label_vsf_path.setFont(font)
         self.label_vsf_path.setObjectName("label_vsf_path")
-        self.label_vsf_path.setText("VSF exe路径：")
-        self.label_vsf_path.setToolTip("输入为视频，输出为字幕结果")
+        self.label_vsf_path.setText("VSF exe path:")
+        self.label_vsf_path.setToolTip("Input: Video path. Output: subtitle result")
         self.hl_vsf_path.addWidget(self.label_vsf_path)
 
         self.le_vsf_path = QLineEdit(self.vsf_path_widget)
@@ -216,11 +216,11 @@ class RapidVideOCRUI(QWidget):
 
         self.btn_vsf_path = QPushButton(self.vsf_path_widget)
         self.btn_vsf_path.setObjectName("btn_vsf_path")
-        self.btn_vsf_path.setText("点击选择")
+        self.btn_vsf_path.setText("Select")
         self.btn_vsf_path.clicked.connect(self.select_vsf_path)
         self.hl_vsf_path.addWidget(self.btn_vsf_path)
 
-        # 视频目录 [] 点击选择
+        # 视频目录 [] Select
         self.video_path_widget = QWidget(self.tab_vsf_ocr)
         self.video_path_widget.setGeometry(QRect(30, 70, 641, 31))
         font.setBold(False)
@@ -234,7 +234,7 @@ class RapidVideOCRUI(QWidget):
         self.lable_video_dir = QLabel(self.video_path_widget)
         self.lable_video_dir.setFont(font)
         self.lable_video_dir.setObjectName("lable_video_dir")
-        self.lable_video_dir.setText("视  频  目  录：")
+        self.lable_video_dir.setText("Video Directory:")
         self.hl_video_path.addWidget(self.lable_video_dir)
 
         self.le_video_path = QLineEdit(self.video_path_widget)
@@ -244,7 +244,7 @@ class RapidVideOCRUI(QWidget):
 
         self.btn_select_video = QPushButton(self.video_path_widget)
         self.btn_select_video.setObjectName("btn_select_video")
-        self.btn_select_video.setText("点击选择")
+        self.btn_select_video.setText("Select")
         self.btn_select_video.clicked.connect(self.select_video_dir)
         self.hl_video_path.addWidget(self.btn_select_video)
 
@@ -262,7 +262,7 @@ class RapidVideOCRUI(QWidget):
         self.save_res_dir = QLabel(self.save_video_path_widget)
         self.save_res_dir.setFont(font)
         self.save_res_dir.setObjectName("save_res_dir")
-        self.save_res_dir.setText("保  存  路  径：")
+        self.save_res_dir.setText("Save Path:")
         self.hl_save_res_path.addWidget(self.save_res_dir)
 
         self.le_save_video_path = QLineEdit(self.save_video_path_widget)
@@ -272,7 +272,7 @@ class RapidVideOCRUI(QWidget):
 
         self.btn_select_save_video = QPushButton(self.save_video_path_widget)
         self.btn_select_save_video.setObjectName("btn_select_save_video")
-        self.btn_select_save_video.setText("点击选择")
+        self.btn_select_save_video.setText("Select")
         self.btn_select_save_video.clicked.connect(self.select_save_video_dir)
         self.hl_save_res_path.addWidget(self.btn_select_save_video)
 
@@ -294,7 +294,7 @@ class RapidVideOCRUI(QWidget):
         path_key = "VSFLastPath"
         vsf_full_path = self.get_last_dir(path_key)
         vsf_path, _ = QFileDialog.getOpenFileName(
-            None, caption="选择VSF exe路径", directory=vsf_full_path, filter="*.exe"
+            None, caption="Select VSF exe path", directory=vsf_full_path, filter="*.exe"
         )
         self.le_vsf_path.setText(vsf_path)
         self.set_last_dir(path_key, vsf_path)
@@ -306,7 +306,7 @@ class RapidVideOCRUI(QWidget):
         dir_key = "VideoLastDir"
         directory = self.get_last_dir(dir_key)
         select_dir = QFileDialog.getExistingDirectory(
-            None, caption="选择目录", directory=directory
+            None, caption="Select Dir", directory=directory
         )
         self.le_video_path.setText(select_dir)
         self.set_last_dir(dir_key, select_dir)
@@ -318,7 +318,7 @@ class RapidVideOCRUI(QWidget):
         dir_key = "SaveVideoLastDir"
         directory = self.get_last_dir(dir_key)
         select_dir = QFileDialog.getExistingDirectory(
-            None, caption="选择目录", directory=directory
+            None, caption="Select Dir", directory=directory
         )
         self.le_save_video_path.setText(select_dir)
         self.set_last_dir(dir_key, select_dir)
@@ -330,7 +330,7 @@ class RapidVideOCRUI(QWidget):
         dir_key = "LastDir"
         directory = self.get_last_dir(dir_key)
         select_dir = QFileDialog.getExistingDirectory(
-            None, caption="选择目录", directory=directory
+            None, caption="Select Dir", directory=directory
         )
         self.le_display_img_dir.setText(select_dir)
         self.set_last_dir(dir_key, select_dir)
@@ -341,7 +341,7 @@ class RapidVideOCRUI(QWidget):
         srt_key = "SRTDir"
         save_srt_dir = self.get_last_dir(srt_key)
         file_path, _ = QFileDialog.getSaveFileName(
-            None, "选择保存路径", f"{save_srt_dir}/result.srt", "srt(*.srt)"
+            None, "Select save path", f"{save_srt_dir}/result.srt", "srt(*.srt)"
         )
         self.le_save_path.setText(file_path)
         self.set_last_dir(srt_key, file_path)
@@ -361,7 +361,7 @@ class RapidVideOCRUI(QWidget):
             self.vsf_ocr(is_select_mode, batch_num)
 
         question = QMessageBox.question(
-            self, "识别完毕", "是否继续识别？（Yes → 继续，NO → 退出）"
+            self, "Rec over", "Continue rec? (Yes → continue, NO → quit）"
         )
         if question == QMessageBox.Yes:
             self.clear_input()
@@ -373,11 +373,11 @@ class RapidVideOCRUI(QWidget):
         save_full_path = self.le_save_path.text().strip()
 
         if not img_dir:
-            self.show_msg("图像路径不能为空")
+            self.show_msg("Image path cannot be empty.")
             return
 
         if not save_full_path:
-            self.show_msg("保存路径不能为空")
+            self.show_msg("Save path cannot be empty.")
             return
 
         is_select_mode = self.rb_rec_mode.isChecked()
@@ -402,15 +402,15 @@ class RapidVideOCRUI(QWidget):
         save_dir = self.le_save_video_path.text().strip()
 
         if not vsf_exe_path:
-            self.show_msg("VSF exe路径不能为空")
+            self.show_msg("VSF exe path cannot be empty.")
             return
 
         if not video_path:
-            self.show_msg("视频目录不能为空")
+            self.show_msg("Video dir cannot be empty")
             return
 
         if not save_dir:
-            self.show_msg("保存路径不能为空")
+            self.show_msg("Save path cannot be empty.")
             return
 
         extractor = RapidVideoSubFinderOCR(
@@ -431,7 +431,7 @@ class RapidVideOCRUI(QWidget):
         self.exit()
 
     def show_msg(self, txt: str):
-        QMessageBox.information(self, "信息", txt)
+        QMessageBox.information(self, "Message", txt)
 
     def exit(
         self,
