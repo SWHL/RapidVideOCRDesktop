@@ -43,7 +43,7 @@ jobs:
 
       - name: Install env
         run: |
-          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version rapidvideocr
+          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version rapid_videocr
 
       - name: Run pyinstaller
         id: run_pyinstaller
@@ -112,7 +112,7 @@ jobs:
 
       - name: Install env
         run: |
-          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version rapidvideocr
+          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version rapid_videocr
 
       - name: Run pyinstaller
         id: run_pyinstaller
