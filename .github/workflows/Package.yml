@@ -26,7 +26,7 @@ jobs:
     needs: create_release
     strategy:
       matrix:
-        os: ['ubuntu-22.04', 'windows-2022', 'ubuntu-20.04']
+        os: ['ubuntu-22.04', 'windows-2022', 'ubuntu-20.04', 'macos-14']
 
     steps:
       - name: Pull latest code
@@ -43,7 +43,7 @@ jobs:
 
       - name: Install env
         run: |
-          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version
+          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version rapidvideocr
 
       - name: Run pyinstaller
         id: run_pyinstaller
@@ -95,7 +95,7 @@ jobs:
     needs: create_release
     strategy:
       matrix:
-        os: ['ubuntu-22.04', 'windows-2022', 'ubuntu-20.04']
+        os: ['ubuntu-22.04', 'windows-2022', 'ubuntu-20.04', 'macos-14']
 
     steps:
       - name: Pull latest code
@@ -112,7 +112,7 @@ jobs:
 
       - name: Install env
         run: |
-          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version
+          pip3 install pyqt5 pyinstaller tqdm rapidocr_onnxruntime get_pypi_latest_version rapidvideocr
 
       - name: Run pyinstaller
         id: run_pyinstaller
