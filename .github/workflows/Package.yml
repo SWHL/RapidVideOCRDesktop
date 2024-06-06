@@ -32,10 +32,10 @@ jobs:
       - name: Pull latest code
         uses: actions/checkout@v3
 
-      - name: Set up Python 3.9
+      - name: Set up Python 3.8
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.8'
           architecture: 'x64'
 
       - name: Display Python version
@@ -101,10 +101,10 @@ jobs:
       - name: Pull latest code
         uses: actions/checkout@v3
 
-      - name: Set up Python 3.9
+      - name: Set up Python 3.8
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.8'
           architecture: 'x64'
 
       - name: Display Python version
