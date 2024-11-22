@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Pull latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v4
@@ -52,13 +52,10 @@ jobs:
           mv ui/* .
 
           py_path="RapidVideOCR.py"
-          txt_path="RapidVideOCR.txt"
-          mv $py_path $txt_path
-          line_num=$(sed -n "/self.version = /=" $txt_path)
+          line_num=$(sed -n "/self.version = /=" $py_path)
           new_version="${{ github.ref_name }}"
-          sed -i "${line_num}d" $txt_path
-          sed -i "${line_num}i\        self.version = '${new_version}'" $txt_path
-          mv $txt_path $py_path
+          sed -i "${line_num}d" $py_path
+          sed -i "${line_num}i\        self.version = '${new_version}'" $py_path
 
           pyinstaller RapidVideOCR.spec
           echo "VERSION=${{ github.ref_name }}" >> $GITHUB_OUTPUT
@@ -99,7 +96,7 @@ jobs:
 
     steps:
       - name: Pull latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v4
@@ -120,15 +117,13 @@ jobs:
         run: |
           mv ui/* .
 
-          py_path="RapidVideOCR_En.py"
-          txt_path="RapidVideOCR.txt"
-          mv $py_path $txt_path
-          line_num=$(sed -n "/self.version = /=" $txt_path)
+          py_path="RapidVideOCR_en.py"
+          line_num=$(sed -n "/self.version = /=" $py_path)
           new_version="${{ github.ref_name }}"
-          sed -i "${line_num}d" $txt_path
-          sed -i "${line_num}i\        self.version = '${new_version}'" $txt_path
-          mv $txt_path $py_path
+          sed -i "${line_num}d" $py_path
+          sed -i "${line_num}i\        self.version = '${new_version}'" $py_path
 
+          sed -i "s/RapidVideOCR/RapidVideOCR_en/" RapidVideOCR.spec
           pyinstaller RapidVideOCR.spec
           echo "VERSION=${{ github.ref_name }}" >> $GITHUB_OUTPUT
 
