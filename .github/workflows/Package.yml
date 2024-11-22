@@ -117,13 +117,13 @@ jobs:
         run: |
           mv ui/* .
 
-          py_path="RapidVideOCR_en.py"
+          py_path="RapidVideOCR_En.py"
           line_num=$(sed -n "/self.version = /=" $py_path)
           new_version="${{ github.ref_name }}"
           sed -i "${line_num}d" $py_path
           sed -i "${line_num}i\        self.version = '${new_version}'" $py_path
 
-          sed -i "s/RapidVideOCR/RapidVideOCR_en/" RapidVideOCR.spec
+          sed -i "s/RapidVideOCR/RapidVideOCR_En/" RapidVideOCR.spec
           pyinstaller RapidVideOCR.spec
           echo "VERSION=${{ github.ref_name }}" >> $GITHUB_OUTPUT
 
