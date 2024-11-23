@@ -77,8 +77,7 @@ jobs:
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            dist/${{ env.ZIP_NAME }}
+          files: dist/*.zip
 
       # - name: Upload release asset
       #   id: upload-release-asset
