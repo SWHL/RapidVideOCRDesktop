@@ -126,14 +126,14 @@ jobs:
         env:
             ZIP_NAME: RapidVideOCR-${{ steps.run_pyinstaller.outputs.VERSION }}-${{ matrix.os }}-${{ runner.arch }}-no-installer_en.zip
         run: |
-          powershell Compress-Archive ${{ github.workspace }}\dist\RapidVideOCR ${{ github.workspace }}\dist\${{ env.ZIP_NAME }}
+          powershell Compress-Archive ${{ github.workspace }}\dist\RapidVideOCR_En ${{ github.workspace }}\dist\${{ env.ZIP_NAME }}
 
       - if: matrix.os != 'windows-2022'
         env:
             ZIP_NAME: RapidVideOCR-${{ steps.run_pyinstaller.outputs.VERSION }}-${{ matrix.os }}-${{ runner.arch }}-no-installer_en.zip
         run: |
           cd $GITHUB_WORKSPACE/dist/
-          zip -r ${{ env.ZIP_NAME }} RapidVideOCR
+          zip -r ${{ env.ZIP_NAME }} RapidVideOCR_En
 
       - name: Upload release asset
         uses: softprops/action-gh-release@v2
